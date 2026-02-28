@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 220" width="400" height="220">
+  <rect width="400" height="220" fill="#1e293b" rx="8"/>
+  <rect x="12" y="12" width="376" height="28" fill="#334155" rx="4"/>
+  <rect x="12" y="48" width="376" height="120" fill="#0f172a"/>
+  <text x="200" y="95" text-anchor="middle" fill="#94a3b8" font-size="14" font-family="system-ui,sans-serif">&#1058;&#1054;&#1055;: 9,3 &#1076;&#1085;&#1103; &#183; &#1058;&#1088;&#1072;&#1092;&#1080;&#1082; +278%</text>
+  <text x="200" y="120" text-anchor="middle" fill="#94a3b8" font-size="14" font-family="system-ui,sans-serif">20+ &#1087;&#1088;&#1086;&#1077;&#1082;&#1090;&#1086;&#1074; &#1073;&#1077;&#1079; &#1089;&#1072;&#1085;&#1082;&#1094;&#1080;&#1081;</text>
+  <text x="200" y="195" text-anchor="middle" fill="#94a3b8" font-size="12" font-family="system-ui,sans-serif">&#1057;&#1088;&#1077;&#1076;&#1085;&#1080;&#1081; &#1089;&#1088;&#1086;&#1082; &#1074;&#1099;&#1093;&#1086;&#1076;&#1072; &#1074; &#1058;&#1054;&#1055;</text>
+</svg>

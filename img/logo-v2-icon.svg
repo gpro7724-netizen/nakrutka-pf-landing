@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 40" width="220" height="40" aria-hidden="true">
+  <defs>
+    <linearGradient id="v2grad" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" style="stop-color:#0c4a6e"/>
+      <stop offset="100%" style="stop-color:#0284c7"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" stroke="url(#v2grad)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M6 28h4V18l4-6 4 6v10h4"/>
+    <path d="M14 28V14"/>
+  </g>
+  <text x="44" y="28" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="700" fill="#0f172a" letter-spacing="-0.03em">Agressor</text>
+</svg>

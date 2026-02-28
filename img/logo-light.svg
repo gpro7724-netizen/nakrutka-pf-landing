@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40" aria-hidden="true">
+  <defs>
+    <linearGradient id="logo-flame" x1="0%" y1="0%" x2="100%" y2="100%" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ffed5c"/>
+      <stop offset="25%" stop-color="#ffb020"/>
+      <stop offset="60%" stop-color="#ff6b00"/>
+      <stop offset="100%" stop-color="#ff4500"/>
+    </linearGradient>
+  </defs>
+  <!-- Буква A (максимально белая) -->
+  <text x="4" y="28" font-family="Manrope, system-ui, sans-serif" font-size="26" font-weight="800" fill="#ffffff" letter-spacing="-0.03em">A</text>
+  <!-- Молния через A -->
+  <path d="M7 6 L16 6 L26 32 L18 32 Z" fill="url(#logo-flame)"/>
+</svg>
