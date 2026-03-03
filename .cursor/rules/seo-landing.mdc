@@ -1,0 +1,38 @@
+---
+description: Правила разработки лендинга «Сайт по сеошке» и ссылки на скиллы
+globs: "**/*.{html,css,js,md}"
+alwaysApply: true
+---
+
+# Сайт по сеошке — правила разработки
+
+## О проекте
+
+- **Проект**: одностраничный лендинг «Сайт по сеошке» для сервиса накрутки поведенческих факторов в Яндекс.
+- Основные файлы: `index.html`, `css/styles.css`, `js/main.js`, `api/send-lead.js`, папки `img/`, `assets/`, `video/`.
+- Формы отправляют заявки через serverless-функцию `api/send-lead.js` в Telegram (переменные окружения `TELEGRAM_BOT_TOKEN` и `TELEGRAM_CHAT_ID` на хостинге).
+- Для правок дизайна, вёрстки и конверсии используй скиллы из `.cursor/skills/` (установлены из [AlexProTg/awesome-agent-skills](https://github.com/AlexProTg/awesome-agent-skills)):
+  - **Дизайн/UX**: frontend-design, ui-ux-designer.
+  - **Кодинг/API**: api-patterns, error-handling-patterns.
+  - **Telegram/заявки**: telegram-bot-builder, telegram-automation.
+
+## Требования к коду и вёрстке
+
+- **Адаптивность**: Mobile First, корректное отображение на ширинах 320–1440+ px. Не ломать сетку и отступы.
+- **Производительность**: минимизировать лишний JS, изображения оптимизировать по размеру, видео — по возможности через компрессию.
+- **Формы**: валидация на стороне клиента (формат телефона/email), аккуратные сообщения об ошибках, недублирующиеся заявки.
+- **API**: все запросы к `api/send-lead.js` должны обрабатывать ошибки (таймауты, недоступность Telegram), логировать и показывать пользователю понятное сообщение.
+
+## Скиллы
+
+Локально для этого проекта используются скиллы:
+
+- `frontend-design`
+- `ui-ux-designer`
+- `api-patterns`
+- `error-handling-patterns`
+- `telegram-bot-builder`
+- `telegram-automation`
+
+Подробнее про каждый скилл и как их применять — в `.cursor/skills/README.md` и в соответствующих `SKILL.md` (их можно скопировать из `awesome-agent-skills` в `.cursor/skills/`).
+

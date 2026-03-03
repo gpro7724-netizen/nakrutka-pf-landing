@@ -41,7 +41,7 @@ module.exports = async function handler(req, res) {
     'Имя: ' + name,
     'Контакт: ' + contact,
     '',
-    'Ответить: https://t.me/pashninburgers1'
+    'Ответить: https://t.me/+6FkzPZbKu9gxYTEy'
   ].join('\n');
 
   const url = `https://api.telegram.org/bot${token}/sendMessage`;

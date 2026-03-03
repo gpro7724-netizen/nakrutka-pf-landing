@@ -29,14 +29,15 @@
           <a href="#rent" class="nav__link">Аренда софта</a>
           <a href="#pricing" class="nav__link">Тарифы</a>
           <a href="#our-cases" class="nav__link">Кейсы</a>
+          <a href="#channel" class="nav__link">Наш канал</a>
           <a href="#reviews" class="nav__link">Отзывы</a>
         </div>
         <a href="#free-test" class="nav__link nav__link--cta">Бесплатный тест</a>
-        <a href="https://t.me/pashninburgers1" class="nav__link nav__link--tg" target="_blank" rel="noopener" aria-label="Написать в Telegram">
+        <a href="https://t.me/+6FkzPZbKu9gxYTEy" class="nav__link nav__link--tg" target="_blank" rel="noopener" aria-label="Написать в Telegram">
           <img src="img/tg-icon.svg" alt="" width="24" height="24" class="tg-icon">
         </a>
       </nav>
-      <a href="https://t.me/pashninburgers1" class="header__tg" target="_blank" rel="noopener" aria-label="Написать в Telegram">
+      <a href="https://t.me/+6FkzPZbKu9gxYTEy" class="header__tg" target="_blank" rel="noopener" aria-label="Написать в Telegram">
         <img src="img/tg-icon.svg" alt="" width="24" height="24" class="tg-icon">
       </a>
       <button type="button" class="burger" aria-label="Открыть меню" aria-expanded="false">
@@ -51,9 +52,13 @@
     <section class="hero">
       <div class="hero__bg" aria-hidden="true">
         <video class="hero__video" autoplay muted loop playsinline disablePictureInPicture preload="auto">
-          <source src="video/hero-bg.mp4" type="video/mp4">
+          <source src="video/hero-pika.mp4" type="video/mp4">
         </video>
-        <span class="hero__forge-text" aria-hidden="true">ваш сайт</span>
+        <div class="hero__bg-rgb">
+          <span class="hero__rgb-layer hero__rgb-layer--r"></span>
+          <span class="hero__rgb-layer hero__rgb-layer--g"></span>
+          <span class="hero__rgb-layer hero__rgb-layer--b"></span>
+        </div>
         <span class="hero__bg-overlay"></span>
         <span class="hero__bg-shape hero__bg-shape--1"></span>
         <span class="hero__bg-shape hero__bg-shape--2"></span>
@@ -72,19 +77,13 @@
           </h1>
           <p class="hero__subtitle">Выводим сайты и проекты в ТОП. Работаем с сайтами, маркетплейсами и сервисами.</p>
         </div>
-        <div class="hero__pills">
-          <span class="hero__pill">Быстрее конкурентов попадёте в ТОП</span>
-          <span class="hero__pill">Методы без риска для сайта и аккаунтов</span>
-          <span class="hero__pill">Работаем «под ключ» — вы получаете результат</span>
-        </div>
-        <a href="#free-test" class="btn btn--primary btn--lg">Бесплатный тест</a>
-        <p class="hero__stats">500+ проектов · Рост за 1–2 недели</p>
         <form class="lead-form lead-form--hero" id="form-hero" data-form>
           <input type="text" name="name" class="lead-form__input" placeholder="Ваше имя" required autocomplete="name">
           <input type="text" name="contact" class="lead-form__input" placeholder="Телефон или Telegram" required autocomplete="tel">
           <button type="submit" class="btn btn--submit">Отправить заявку</button>
           <p class="lead-form__message" data-form-message hidden></p>
         </form>
+        <p class="hero__pf-neon" aria-hidden="true" id="hero-pf-neon">PF</p>
       </div>
     </section>
 
@@ -98,22 +97,22 @@
       <div class="container">
         <h2 class="section-title reveal" data-reveal>Почему выбирают нас</h2>
         <div class="advantages__grid">
-          <article class="card reveal reveal--delay-1" data-reveal>
+          <article class="card card--accent-blue reveal reveal--delay-1" data-reveal>
             <span class="card__icon card__icon--shield" aria-hidden="true"></span>
             <h3 class="card__title">Реальный результат без забот</h3>
             <p class="card__text">Ваш сайт или проект начинает стабильно расти в выдаче и показывает прирост позиций.</p>
           </article>
-          <article class="card reveal reveal--delay-2" data-reveal>
+          <article class="card card--accent-amber reveal reveal--delay-2" data-reveal>
             <span class="card__icon card__icon--rocket" aria-hidden="true"></span>
             <h3 class="card__title">Безопасность для ваших проектов</h3>
             <p class="card__text">Используем методы, похожие на реальное поведение, без риска для сайта и аккаунтов.</p>
           </article>
-          <article class="card reveal reveal--delay-3" data-reveal>
+          <article class="card card--accent-red reveal reveal--delay-3" data-reveal>
             <span class="card__icon card__icon--cycle" aria-hidden="true"></span>
             <h3 class="card__title">Полный цикл без лишних забот</h3>
             <p class="card__text">Берём на себя всё: стратегию, запуск, контроль и отчёты. Вы получаете результат и экономите время.</p>
           </article>
-          <article class="card reveal reveal--delay-4" data-reveal>
+          <article class="card card--accent-green reveal reveal--delay-4" data-reveal>
             <span class="card__icon card__icon--wallet" aria-hidden="true"></span>
             <h3 class="card__title">Фиксированная стоимость</h3>
             <p class="card__text">Понятные тарифы без скрытых доплат. Клики не сгорают — используйте когда удобно.</p>
@@ -132,6 +131,9 @@
       <div class="container">
         <h2 class="section-title reveal" data-reveal>Почему накрутка ПФ быстрее и выгоднее классического SEO?</h2>
         <p class="comparison__lead reveal" data-reveal>Сравните сами — и выберите то, что реально работает сегодня.</p>
+        <div class="comparison__visual reveal" data-reveal>
+          <img src="img/pf-vs-seo.png" alt="ПФ vs SEO — накрутка ПФ сильнее и быстрее классического SEO" class="comparison__img" width="480" height="360" loading="lazy">
+        </div>
         <div class="comparison__grid">
           <div class="comparison__col comparison__col--minus">
             <h3 class="comparison__col-title">Обычное SEO</h3>
@@ -167,6 +169,9 @@
       <div class="container">
         <h2 class="section-title reveal" data-reveal>Аренда программ для накрутки ПФ</h2>
         <p class="rent__intro">Мы предлагаем готовый софт для самостоятельной работы. Это выгодное решение для тех, кто предпочитает полный контроль и гибкость.</p>
+        <p class="rent__cta">
+          <a href="https://t.me/+6FkzPZbKu9gxYTEy" class="btn btn--rent-rgb" target="_blank" rel="noopener">Тестируйте наш софт уже сейчас</a>
+        </p>
         <div class="rent__steps">
           <div class="rent__step">
             <span class="rent__step-num">1</span>
@@ -212,27 +217,31 @@
       <div class="container">
         <h2 class="section-title reveal" data-reveal>Тарифы на накрутку ПФ</h2>
         <p class="pricing__intro reveal" data-reveal>Стоимость одного клика зависит от размера вашего бюджета — чем больше бюджет, тем ниже цена за клик. Клики не сгорают в конце месяца — используйте их в удобное для вас время.</p>
-        <div class="pricing__table-wrap">
-          <table class="pricing__table" id="pricing-table">
-            <thead>
-              <tr>
-                <th>Бюджет (₽)</th>
-                <th>Стоимость клика</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td>до 25 000</td><td>1,00 ₽</td></tr>
-              <tr><td>25 000 — 40 000</td><td>0,80 ₽</td></tr>
-              <tr><td>40 000 — 90 000</td><td>0,70 ₽</td></tr>
-              <tr><td>90 000 — 150 000</td><td>0,50 ₽</td></tr>
-              <tr><td>150 000 — 300 000</td><td>0,40 ₽</td></tr>
-              <tr><td>300 000 — 1 000 000</td><td>0,25 ₽</td></tr>
-              <tr class="pricing__table-row--custom"><td colspan="2">от 1 000 000 — индивидуально</td></tr>
-            </tbody>
-          </table>
+        <div class="pricing__tables reveal" data-reveal>
+          <div class="pricing__table-wrap">
+            <table class="pricing__table" id="pricing-table">
+              <thead>
+                <tr>
+                  <th class="pricing__head-cell pricing__head-cell--budget"><span class="pricing__head-inner">Бюджет (₽)</span></th>
+                  <th class="pricing__head-cell pricing__head-cell--cpc"><span class="pricing__head-inner">Стоимость клика</span></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>до 25 000 ₽</td><td>1,00 ₽</td></tr>
+                <tr><td>25 000 — 40 000 ₽</td><td>0,80 ₽</td></tr>
+                <tr><td>40 000 — 90 000 ₽</td><td>0,70 ₽</td></tr>
+                <tr><td>90 000 — 150 000 ₽</td><td>0,50 ₽</td></tr>
+                <tr><td>150 000 — 300 000 ₽</td><td>0,40 ₽</td></tr>
+                <tr><td>300 000 — 1 000 000 ₽</td><td>0,25 ₽</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="pricing__custom-block">
+            <p class="pricing__custom-text">от 1 000 000 ₽ — индивидуально</p>
+          </div>
         </div>
         <p class="pricing__note">Не знаете, какой бюджет выбрать? Напишите нам — поможем рассчитать оптимальную стратегию под ваши задачи.</p>
-        <a href="https://t.me/pashninburgers1" class="btn btn--primary" target="_blank" rel="noopener">Попробовать бесплатно</a>
+        <a href="https://t.me/+6FkzPZbKu9gxYTEy" class="btn btn--primary" target="_blank" rel="noopener">Попробовать бесплатно</a>
       </div>
     </section>
 
@@ -245,7 +254,40 @@
       <div class="container">
         <h2 class="section-title reveal" data-reveal>Попробуйте наш софт перед арендой абсолютно бесплатно</h2>
         <p class="free-test__text">Мы даём возможность протестировать программы в реальных условиях, чтобы вы убедились в эффективности и удобстве.</p>
-        <a href="https://t.me/pashninburgers1" class="btn btn--primary btn--lg" target="_blank" rel="noopener">Попробовать бесплатно</a>
+        <p class="free-test__visual">
+          <img src="https://images.steamusercontent.com/ugc/2112808143584432512/DCEF393F7759D4DD0AAC38CED837CCB6CEAB07B0/" alt="Бесплатно" class="free-test__img" width="480" height="360" loading="lazy">
+        </p>
+        <a href="https://t.me/+6FkzPZbKu9gxYTEy" class="btn btn--gold btn--lg" target="_blank" rel="noopener">Попробуй сейчас!</a>
+      </div>
+    </section>
+
+    <section class="channel section-with-bg" id="channel">
+      <div class="section-bg section-bg--blue" aria-hidden="true">
+        <span class="section-bg__shape section-bg__shape--1"></span>
+        <span class="section-bg__shape section-bg__shape--2"></span>
+        <span class="section-bg__shape section-bg__shape--3"></span>
+        <span class="section-bg__glow section-bg__glow--1"></span>
+      </div>
+      <div class="container">
+        <div class="channel__content">
+          <h2 class="section-title section-title--channel reveal" data-reveal>
+            Наш канал
+            <img src="img/tg-icon.svg" alt="" class="section-title__sticker section-title__sticker--channel" width="40" height="40" aria-hidden="true">
+          </h2>
+          <div class="channel__visual">
+            <img src="img/channel-popup.png" alt="Канал Накрутка ПФ | pf-agressor.ru в Telegram" class="channel__screenshot" width="320" height="240" loading="lazy">
+          </div>
+          <div class="channel__info">
+            <p>У нас есть Telegram‑канал с подробной информацией о софте, обновлениями и реальными кейсами по накрутке ПФ.</p>
+            <p>В канале вы найдёте ответы на частые вопросы, инструкции по запуску и быструю связь с поддержкой.</p>
+          </div>
+          <div class="channel__cta">
+            <a href="https://t.me/+6FkzPZbKu9gxYTEy" class="btn btn--tg-channel channel__btn" target="_blank" rel="noopener">
+              <img src="img/tg-icon.svg" alt="" class="btn__tg-icon" width="20" height="20" aria-hidden="true">
+              Перейти в Telegram‑канал
+            </a>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -262,7 +304,6 @@
             <div class="our-cases__carousel" id="cases-carousel">
               <div class="our-cases__track">
                 <div class="our-cases__slide"><img src="img/case-1.png" alt="Кейс: динамика позиций" class="our-cases__img" width="800" height="480"></div>
-                <div class="our-cases__slide"><img src="img/case-2.png" alt="Кейс: рост в ТОП-10" class="our-cases__img" width="800" height="480"></div>
                 <div class="our-cases__slide"><img src="img/case-3.png" alt="Кейс: статистика позиций" class="our-cases__img" width="800" height="480"></div>
                 <div class="our-cases__slide"><img src="img/case-4.png" alt="Кейс: видимость и позиции" class="our-cases__img" width="800" height="480"></div>
                 <div class="our-cases__slide"><img src="img/case-5.png" alt="Кейс: результаты накрутки ПФ" class="our-cases__img" width="800" height="480"></div>
@@ -277,7 +318,7 @@
                 <span class="our-cases__arrow-icon" aria-hidden="true"></span>
               </button>
             </div>
-            <p class="our-cases__counter" id="cases-counter" aria-live="polite">1 / 8</p>
+            <p class="our-cases__counter" id="cases-counter" aria-live="polite">1 / 7</p>
           </div>
           <div class="our-cases__card reveal" data-reveal>
             <div class="our-cases__item">
@@ -308,12 +349,40 @@
         <span class="section-bg__glow section-bg__glow--1"></span>
       </div>
       <div class="container">
-        <h2 class="section-title reveal" data-reveal>Кейсы и отзывы</h2>
+        <h2 class="section-title section-title--reviews reveal" data-reveal>💬 Отзывы</h2>
         <div class="cases-reviews__visual reveal" data-reveal aria-hidden="true">
           <div class="chart-mini">
             <span class="chart-mini__bar chart-mini__bar--before" title="До">15–20</span>
             <span class="chart-mini__arrow"></span>
             <span class="chart-mini__bar chart-mini__bar--after" title="После">ТОП-5</span>
+          </div>
+          <div class="pf-rocket" aria-hidden="true">
+            <div class="pf-rocket__header">
+              <img src="img/yandex-icon.svg" alt="" class="pf-rocket__yandex" width="40" height="40">
+              <p class="pf-rocket__caption">ПФ в Яндексе: рост позиций</p>
+            </div>
+            <div class="pf-rocket__arrow-wrap">
+              <img src="https://images.steamusercontent.com/ugc/2112808143584432512/DCEF393F7759D4DD0AAC38CED837CCB6CEAB07B0/" alt="Диаграмма роста вверх" class="pf-rocket__diagram-gif" width="180" height="100" loading="lazy">
+            </div>
+            <div class="pf-rocket__bars">
+              <div class="pf-rocket__bar-wrap pf-rocket__bar-wrap--15">
+                <span class="pf-rocket__bar" aria-hidden="true"></span>
+                <span class="pf-rocket__bar-label">15</span>
+              </div>
+              <div class="pf-rocket__bar-wrap pf-rocket__bar-wrap--10">
+                <span class="pf-rocket__bar" aria-hidden="true"></span>
+                <span class="pf-rocket__bar-label">10</span>
+              </div>
+              <div class="pf-rocket__bar-wrap pf-rocket__bar-wrap--5">
+                <span class="pf-rocket__bar" aria-hidden="true"></span>
+                <span class="pf-rocket__bar-label">5</span>
+              </div>
+              <div class="pf-rocket__bar-wrap pf-rocket__bar-wrap--1">
+                <span class="pf-rocket__crown" aria-hidden="true">👑</span>
+                <span class="pf-rocket__bar" aria-hidden="true"></span>
+                <span class="pf-rocket__bar-label">1</span>
+              </div>
+            </div>
           </div>
         </div>
         <div class="cases-reviews__grid">
@@ -328,16 +397,16 @@
         </div>
         <div class="reviews">
           <article class="review">
-            <span class="review__quote" aria-hidden="true"></span>
-            <p class="review__text">Заказал накрутку для коммерческого запроса. Позиция с 12-й поднялась в топ-3. Цена адекватная, клики не сгорают — удобно растягивать по кампаниям.</p>
+            <span class="review__quote review__quote--1" aria-hidden="true">🔥</span>
+            <p class="review__text">Заказал накрутку по своей шиномонтажке, 2000 кликов. Мои ключи с 12-й поднялись в топ-10. Цена адекватная, клики не сгорают — удобно растягивать по кампаниям.</p>
             <footer class="review__footer">
               <img src="img/avatar-webmaster.jpg" alt="" class="review__avatar" width="40" height="40" loading="lazy">
               <span class="review__author">Веб-мастер, ниша авто</span>
             </footer>
           </article>
           <article class="review">
-            <span class="review__quote" aria-hidden="true"></span>
-            <p class="review__text">Пользуюсь арендой софта уже три месяца. Настройка заняла день, дальше всё идёт по плану. Рекомендую тем, кто хочет контролировать процесс сам.</p>
+            <span class="review__quote review__quote--2" aria-hidden="true">💯</span>
+            <p class="review__text">Пользуюсь софтом уже три месяца. Обучение заняло день, дальше всё идёт по плану. Рекомендую тем, кто хочет контролировать процесс сам.</p>
             <footer class="review__footer">
               <img src="img/avatar-seo.jpg" alt="" class="review__avatar" width="40" height="40" loading="lazy">
               <span class="review__author">SEO-специалист</span>
@@ -356,7 +425,7 @@
       <div class="container">
         <h2 class="section-title reveal" data-reveal>Выведем ваш проект в ТОП</h2>
         <p class="cta__text">Мы готовы обсудить задачи, предложить стратегию и запустить работу в кратчайшие сроки. Оставьте заявку или напишите нам удобным способом.</p>
-        <a href="https://t.me/pashninburgers1" class="btn btn--tg btn--lg cta__tg" target="_blank" rel="noopener">Написать в Telegram</a>
+        <a href="https://t.me/+6FkzPZbKu9gxYTEy" class="btn btn--tg btn--lg cta__tg" target="_blank" rel="noopener">Написать в Telegram</a>
         <form class="lead-form lead-form--cta" id="form-cta" data-form>
           <input type="text" name="name" class="lead-form__input" placeholder="Ваше имя" required autocomplete="name">
           <input type="text" name="contact" class="lead-form__input" placeholder="Телефон или Telegram" required autocomplete="tel">
@@ -367,13 +436,24 @@
     </section>
   </main>
 
+  <div class="lightbox" id="cases-lightbox" hidden>
+    <div class="lightbox__backdrop" data-lightbox-close></div>
+    <div class="lightbox__dialog" role="dialog" aria-modal="true" aria-label="Просмотр кейса">
+      <img src="" alt="" class="lightbox__img" id="cases-lightbox-img">
+    </div>
+    <button type="button" class="lightbox__close" data-lightbox-close aria-label="Закрыть просмотр"></button>
+    <button type="button" class="lightbox__arrow lightbox__arrow--prev" id="lightbox-prev" aria-label="Предыдущий скрин"></button>
+    <button type="button" class="lightbox__arrow lightbox__arrow--next" id="lightbox-next" aria-label="Следующий скрин"></button>
+    <p class="lightbox__counter" id="lightbox-counter" aria-live="polite">1 / 7</p>
+  </div>
+
   <footer class="footer">
     <div class="container footer__inner">
       <div class="footer__left">
         <a href="#top" class="footer__logo" aria-label="На главную">
-          <img src="img/logo-light.svg" alt="" width="56" height="56" class="footer__logo-img">
+          <img src="img/logo-light.svg" alt="" width="72" height="72" class="footer__logo-img">
         </a>
-        <a href="https://t.me/pashninburgers1" class="footer__tg" target="_blank" rel="noopener" aria-label="Написать в Telegram">
+        <a href="https://t.me/+6FkzPZbKu9gxYTEy" class="footer__tg" target="_blank" rel="noopener" aria-label="Написать в Telegram">
           <img src="img/tg-icon.svg" alt="" width="22" height="22" class="tg-icon">
         </a>
       </div>
@@ -382,6 +462,7 @@
         <a href="#reviews">Отзывы</a>
         <a href="#pricing">Тарифы</a>
         <a href="#rent">Аренда софта</a>
+        <a href="#channel">Наш канал</a>
         <a href="#cta">Контакты</a>
       </nav>
       <a href="#free-test" class="btn btn--primary btn--sm">Бесплатный тест</a>

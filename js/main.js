@@ -1,7 +1,7 @@
 (function () {
   'use strict';
 
-  var TELEGRAM_LINK = 'https://t.me/pashninburgers1';
+  var TELEGRAM_LINK = 'https://t.me/+6FkzPZbKu9gxYTEy';
   var API_LEAD = '/api/send-lead';
 
   function byId(id) { return document.getElementById(id); }
@@ -181,14 +181,134 @@
     goTo(0);
   }
 
+  function initCasesLightbox() {
+    var lightbox = byId('cases-lightbox');
+    var lightboxImg = byId('cases-lightbox-img');
+    var lightboxPrev = byId('lightbox-prev');
+    var lightboxNext = byId('lightbox-next');
+    var lightboxCounter = byId('lightbox-counter');
+    if (!lightbox || !lightboxImg) return;
+
+    var caseImages = [].slice.call(qsAll('#cases-carousel .our-cases__img'));
+    var total = caseImages.length;
+    var currentIndex = 0;
+    var dialog = lightbox.querySelector('.lightbox__dialog');
+    if (total <= 1) lightbox.classList.add('lightbox--single');
+    var closeEls = lightbox.querySelectorAll('[data-lightbox-close]');
+    var activeTrigger = null;
+
+    function showSlide(i) {
+      currentIndex = (i + total) % total;
+      var slide = caseImages[currentIndex];
+      if (slide) {
+        lightboxImg.src = slide.src;
+        lightboxImg.alt = slide.alt || '';
+      }
+      if (lightboxCounter) lightboxCounter.textContent = (currentIndex + 1) + ' / ' + total;
+    }
+
+    function openLightbox(indexOrTrigger) {
+      var idx = 0;
+      if (typeof indexOrTrigger === 'number') {
+        idx = indexOrTrigger;
+      } else if (indexOrTrigger && indexOrTrigger.src) {
+        idx = caseImages.indexOf(indexOrTrigger);
+        if (idx < 0) idx = 0;
+        activeTrigger = indexOrTrigger;
+      }
+      currentIndex = (idx + total) % total;
+      showSlide(currentIndex);
+      lightbox.hidden = false;
+      document.body.classList.add('lightbox-open');
+    }
+
+    function closeLightbox() {
+      lightbox.hidden = true;
+      document.body.classList.remove('lightbox-open');
+      lightboxImg.src = '';
+      lightboxImg.alt = '';
+      if (activeTrigger && typeof activeTrigger.focus === 'function') {
+        activeTrigger.focus();
+      }
+      activeTrigger = null;
+    }
+
+    function goPrev() {
+      if (total <= 1) return;
+      showSlide(currentIndex - 1);
+    }
+    function goNext() {
+      if (total <= 1) return;
+      showSlide(currentIndex + 1);
+    }
+
+    closeEls.forEach(function (el) {
+      el.addEventListener('click', function () { closeLightbox(); });
+    });
+
+    if (lightboxPrev) lightboxPrev.addEventListener('click', function (e) { e.stopPropagation(); goPrev(); });
+    if (lightboxNext) lightboxNext.addEventListener('click', function (e) { e.stopPropagation(); goNext(); });
+
+    lightbox.addEventListener('click', function (e) {
+      if (e.target === lightbox) closeLightbox();
+    });
+    if (dialog) dialog.addEventListener('click', function (e) { e.stopPropagation(); });
+
+    document.addEventListener('keydown', function (e) {
+      if (lightbox.hidden) return;
+      if (e.key === 'Escape') {
+        closeLightbox();
+        return;
+      }
+      if (e.key === 'ArrowLeft') {
+        e.preventDefault();
+        goPrev();
+      } else if (e.key === 'ArrowRight') {
+        e.preventDefault();
+        goNext();
+      }
+    });
+
+    caseImages.forEach(function (img, idx) {
+      img.setAttribute('tabindex', '0');
+      img.addEventListener('click', function () {
+        openLightbox(idx);
+      });
+      img.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          openLightbox(idx);
+        }
+      });
+    });
+  }
+
+  /** Живая RGB-подсветка надписи PF: плавное переливание цветов как у RGB/живых обоев */
+  function initHeroPfRgb() {
+    var el = byId('hero-pf-neon');
+    if (!el) return;
+    var cycleMs = 16000;
+    var start = Date.now();
+
+    function tick() {
+      var t = (Date.now() - start) / cycleMs;
+      var hue = (t % 1) * 360;
+      el.style.setProperty('--pf-hue', Math.round(hue * 10) / 10);
+      requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  }
+
   function init() {
     initForms();
     initBurger();
     initSmoothScroll();
     initReveal();
     initHeroVideo();
+    initHeroPfRgb();
     initScrollTop();
     initCasesCarousel();
+    initCasesLightbox();
     document.body.classList.add('reveal-ready');
   }
 
